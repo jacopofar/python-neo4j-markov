@@ -17,6 +17,7 @@ Neo4j Markov Chains
 A module to store and use Markov chains in a Neo4j 3 instance.
 
 * Free software: ISC license
+
 .. * Documentation: https://neo4j_markov_chains.readthedocs.org.
 
 Features
