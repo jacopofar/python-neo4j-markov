@@ -2,7 +2,7 @@
 Neo4j Markov Chains
 ===============================
 
-.. image:: https://img.shields.io/pypi/v/neo4j_markov_chains.svg
+<!-- .. image:: https://img.shields.io/pypi/v/neo4j_markov_chains.svg
         :target: https://pypi.python.org/pypi/neo4j_markov_chains
 
 .. image:: https://img.shields.io/travis/jacopofar/neo4j_markov_chains.svg
@@ -11,17 +11,19 @@ Neo4j Markov Chains
 .. image:: https://readthedocs.org/projects/neo4j_markov_chains/badge/?version=latest
         :target: https://readthedocs.org/projects/neo4j_markov_chains/?badge=latest
         :alt: Documentation Status
+        -->
 
 
-A module to store and use Markov chains in a Neo4j 3 instance
+A module to store and use Markov chains in a Neo4j 3 instance.
 
 * Free software: ISC license
-* Documentation: https://neo4j_markov_chains.readthedocs.org.
+<!-- * Documentation: https://neo4j_markov_chains.readthedocs.org. -->
 
 Features
---------
+________
 
-* TODO
+* Support multiple concurrent instances, each action is a transition taking advantage of  Neo4j ´MERGE ... ON CREATE ... ON MATCH´ functionality
+* Efficient next-status random choice using Neo4j reducer
 
 Credits
 ---------
