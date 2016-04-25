@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from neo4j.v1 import GraphDatabase, basic_auth
-import math, random
+import random
 
 
 class Neo4jMarkovChain():
@@ -54,7 +54,7 @@ END
         continuation_count = self.count_followers(elements)
         if continuation_count == 0:
             return None
-        continue_index = math.floor(continuation_count * random.random())
+        continue_index = continuation_count * random.random()
         return self.get_specific_follower(elements, continue_index).values()[0]['found']
 
     def enqueue_transition(self, transition):
