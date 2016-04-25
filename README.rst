@@ -20,6 +20,16 @@ A module to store and use Markov chains in a Neo4j 3 instance.
 
 .. * Documentation: https://neo4j_markov_chains.readthedocs.org.
 
+How to run
+__________
+
+First, you need a Neo4j instance. Visit neo4j.com to get it, or use Docker
+.. code-block:: shell
+    docker run \
+        --publish=7474:7474 --publish=7687:7687 \
+        --volume=/Users/db/data:/data \
+        neo4j/neo4j:milestone
+
 Features
 ________
 
