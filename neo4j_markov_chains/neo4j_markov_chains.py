@@ -2,7 +2,7 @@
 
 from neo4j.v1 import GraphDatabase, basic_auth
 import random
-
+import atexit
 
 class Neo4jMarkovChain():
 
@@ -11,6 +11,12 @@ class Neo4jMarkovChain():
         self.session = GraphDatabase.driver("bolt://" + host, auth=auth_token).session()
         self.window_size = ngram_size
         self.transitions_queue = []
+
+        def close_db_connection():
+            self.flush_queue()
+            self.session.close()
+
+        atexit.register(close_db_connection)
 
     def list_transitions(self, array, weight=1):
         for i in range(len(array)):
